@@ -1,1 +1,10 @@
+<div>
+  <nav class="mat-tab-nav-bar">
+    <ul>
+      <li *ngIf=auth.isAuthenticated$|async>View Profile</li>
+      <li>Login</li>
+      <li></li>
+    </ul>
+  </nav>
+</div>
 <router-outlet></router-outlet>

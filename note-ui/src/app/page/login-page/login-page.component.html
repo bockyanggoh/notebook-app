@@ -1,1 +1,12 @@
-<p>login-page works!</p>
+<ng-template [ngIf]="auth.isAuthenticated$ | async">
+  <div *ngIf="auth.user$ | async as user">
+    <div>Welcome back {{user.name}}!</div>
+  </div>
+</ng-template>
+
+
+<ng-template [ngIf]="auth.isAuthenticated$ | async">
+  <div>
+    <button mat-button color="accent" (click)="auth.loginWithPopup()">Login</button>
+  </div>
+</ng-template>
